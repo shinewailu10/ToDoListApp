@@ -27,7 +27,7 @@ struct ContentView: View {
                         Text("My ToDo List")
                             .font(.largeTitle)
                             .padding()
-                        Spacer()
+                        
                     }
 
                 }
