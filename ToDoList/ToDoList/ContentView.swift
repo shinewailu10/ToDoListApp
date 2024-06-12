@@ -7,10 +7,40 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello")
+        ZStack{
+            VStack(spacing: 0){
+                ZStack{
+                    Rectangle()
+                        .foregroundStyle(.cyan)
+                        .edgesIgnoringSafeArea(.all)
+                        .frame(height: 200)
+                    VStack{
+                        Text(Date(),style: .date)
+                            .font(.system(size: 22))
+                            .padding()
+                        
+                        Text("My ToDo List")
+                            .font(.largeTitle)
+                            .padding()
+                        Spacer()
+                    }
+
+                }
+                
+                Rectangle()
+                    .foregroundColor(.white.opacity(0.95))
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(height: 600)
+            }
+
+        }
     }
+    
 }
 
 #Preview {
