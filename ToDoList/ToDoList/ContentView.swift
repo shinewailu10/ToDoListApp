@@ -12,33 +12,53 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        ZStack{
-            VStack(spacing: 0){
-                ZStack{
+        VStack{
+            ZStack{
+                VStack(spacing: 0){
                     Rectangle()
                         .foregroundStyle(.cyan)
                         .edgesIgnoringSafeArea(.all)
-                        .frame(height: 200)
-                    VStack{
-                        Text(Date(),style: .date)
-                            .font(.system(size: 22))
-                            .padding()
-                        
-                        Text("My ToDo List")
-                            .font(.largeTitle)
-                            .padding()
-                        
-                    }
-
+                        .frame(height: 270)
+                    
+                    Rectangle()
+                        .foregroundColor(.white.opacity(0.95))
+                        .edgesIgnoringSafeArea(.all)
+                        .frame(height: 600)
+                    
+                }
+                VStack{
+                    Spacer()
+                        .frame(height: 50)
+                    Text(Date(),style: .date)
+                        .font(.system(size: 22))
+                        .foregroundStyle(.white)
+                        .padding()
+                    
+                    Text("My ToDo List")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .bold()
+                    
+                    RoundedRectangle(cornerRadius: 25.0)
+                        .foregroundStyle(.white)
+                        .frame(width: 350, height: 300)
+                        .opacity(0.8)
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    Spacer()
+                    
+                    
                 }
                 
-                Rectangle()
-                    .foregroundColor(.white.opacity(0.95))
-                    .edgesIgnoringSafeArea(.all)
-                    .frame(height: 600)
             }
-
         }
+        
+        
     }
     
 }
