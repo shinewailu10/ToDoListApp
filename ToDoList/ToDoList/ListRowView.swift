@@ -7,27 +7,80 @@
 
 import SwiftUI
 
+
+//struct CheckboxToggleStyle: ToggleStyle {
+//
+//    func makeBody(configuration: Configuration) -> some View {
+//        HStack(spacing: 0) {
+//            
+//            RoundedRectangle(cornerRadius: 5.0)
+//                .stroke(lineWidth: 3)
+//                .frame(width: 25, height: 25)
+//                .cornerRadius(5.0)
+//                .overlay() {
+//                    Image(systemName: configuration.isOn ? "checkmark" : "")
+//                        .background(.indigo)
+//                        .foregroundStyle(.white)
+//                }
+//                .onTapGesture {
+//                    
+//                    configuration.isOn.toggle()
+//                    
+//                }
+//            
+//            configuration.label
+//            
+//        }
+//    }
+//}
+
 struct ListRowView: View {
+    @Environment(\.modelContext) private var modelContext
     
     let rowComponents: ToDoComponents
     
+    
+    @State var isD:Bool = false
+    
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text(rowComponents.category)
-                    .bold()
-                Text("-")
-                Text(rowComponents.title)
+        
+        VStack(alignment: .leading, spacing: 0) {
+            
+            HStack(spacing: 10){
+                
+                ZStack{
+                    Circle()
+                        .frame(width: 50)
+                        .foregroundStyle(.indigo.opacity(0.7))
+                    Text(rowComponents.category)
+                }
+                
+                VStack(alignment: .leading, spacing: 0){
+                    Text(rowComponents.title)
+                        .bold()
+                        .font(.title3)
+                    
+                    Text(rowComponents.time, style: .time)
+                        .frame(alignment: .leading)
+                        .foregroundStyle(.secondary)
+                        .font(.callout)
+                }
+                Spacer()
+                CheckboxView()
+//                Toggle("", isOn: $isD)
+//                    .tint(.indigo)
+//                    .toggleStyle(CheckboxToggleStyle())
+            
             }
-            .padding(.bottom, 1)
-            HStack {
-                Text(rowComponents.time, style: .time)
-                    .foregroundStyle(.secondary)
-            }
-            .font(.caption)
-        }    }
+            
+        }.scrollContentBackground(.hidden)
+    }
 }
 
 #Preview {
-    ListRowView(rowComponents: ToDoComponents(title: "Coding", time: Date(), category: "💻", isDone: false, note: ""))
+    List{
+        ListRowView(rowComponents: ToDoComponents(title: "Coding", date: Date(), time: Date(),isDone: false, category: "💻", note: ""))
+        
+    }
 }

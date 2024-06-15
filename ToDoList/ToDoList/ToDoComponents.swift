@@ -10,17 +10,24 @@ import SwiftData
 
 @Model
 final class ToDoComponents {
-    var title: String = ""
+    var title: String
+    var date: Date
     var time: Date
-    var category: String = ""
-    var isDone: Bool = false
-    var note: String = ""
-
-    init(title: String, time: Date, category: String, isDone: Bool, note: String) {
+    var isDone: Bool
+    var category: String
+    var note: String
+    
+    
+    
+    init(title: String = "", date: Date = .now, time: Date = .now, isDone: Bool = false, category: String = "", note: String = "") {
         self.title = title
+        self.date = date
         self.time = time
-        self.category = category
         self.isDone = isDone
+        self.category = category
         self.note = note
     }
+
+    
+    
 }
