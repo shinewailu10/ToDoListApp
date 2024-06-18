@@ -10,7 +10,6 @@
 		9006A4632C1A11AA005D2272 /* ToDoComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9006A4622C1A11AA005D2272 /* ToDoComponents.swift */; };
 		9006A4652C1A29CA005D2272 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9006A4642C1A29C9005D2272 /* ListRowView.swift */; };
 		9089CF3F2C1ACA7500279311 /* CreateToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089CF3E2C1ACA7500279311 /* CreateToDoListView.swift */; };
-		9089CF452C1DCB8700279311 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089CF442C1DCB8600279311 /* CheckboxView.swift */; };
 		90A4126E2C195D5000C53432 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A4126D2C195D5000C53432 /* ToDoListApp.swift */; };
 		90A412702C195D5000C53432 /* ToDoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A4126F2C195D5000C53432 /* ToDoMainView.swift */; };
 		90A412722C195D5500C53432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A412712C195D5500C53432 /* Assets.xcassets */; };
@@ -41,7 +40,6 @@
 		9006A4622C1A11AA005D2272 /* ToDoComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoComponents.swift; sourceTree = "<group>"; };
 		9006A4642C1A29C9005D2272 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		9089CF3E2C1ACA7500279311 /* CreateToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoListView.swift; sourceTree = "<group>"; };
-		9089CF442C1DCB8600279311 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		90A4126A2C195D5000C53432 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A4126D2C195D5000C53432 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		90A4126F2C195D5000C53432 /* ToDoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoMainView.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 				90A4126F2C195D5000C53432 /* ToDoMainView.swift */,
 				9089CF3E2C1ACA7500279311 /* CreateToDoListView.swift */,
 				9006A4642C1A29C9005D2272 /* ListRowView.swift */,
-				9089CF442C1DCB8600279311 /* CheckboxView.swift */,
 				9006A4622C1A11AA005D2272 /* ToDoComponents.swift */,
 				90A412712C195D5500C53432 /* Assets.xcassets */,
 				90A412732C195D5500C53432 /* Preview Content */,
@@ -273,7 +270,6 @@
 				90A4126E2C195D5000C53432 /* ToDoListApp.swift in Sources */,
 				9006A4652C1A29CA005D2272 /* ListRowView.swift in Sources */,
 				9089CF3F2C1ACA7500279311 /* CreateToDoListView.swift in Sources */,
-				9089CF452C1DCB8700279311 /* CheckboxView.swift in Sources */,
 				9006A4632C1A11AA005D2272 /* ToDoComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

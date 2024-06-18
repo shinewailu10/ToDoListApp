@@ -28,12 +28,34 @@ struct CreateToDoListView: View {
     var body: some View {
         NavigationStack{
             VStack(spacing:0){
-                Rectangle()
-                    .foregroundStyle(.indigo)
-                    .frame(height: 80)
-                    .edgesIgnoringSafeArea(.all)
-                    .padding(0)
-                
+                ZStack{
+                    Rectangle()
+                        .foregroundStyle(.my)
+                        .frame(height: 80)
+                        .edgesIgnoringSafeArea(.all)
+                        .padding(0)
+                    HStack{
+                        ZStack{
+                            Circle()
+                                .frame(width: 50)
+                                .foregroundStyle(.white.opacity(0.9))
+                                .edgesIgnoringSafeArea(.all)
+                                .padding(.horizontal)
+                            
+                            Button {
+                                withAnimation{
+                                    dismiss()
+                                }
+                            } label: {
+//                                Image(systemName: "multiply.circle")
+                                Image(systemName: "multiply")
+                                    .foregroundStyle(.black)
+                                    .font(.largeTitle)
+                            }
+                        }
+                        Spacer()
+                    }
+                }
                 Form{
                     VStack(alignment: .leading){
                         
@@ -41,6 +63,7 @@ struct CreateToDoListView: View {
                             .bold()
                         TextField("Title", text: $title)
                             .textFieldStyle(.roundedBorder)
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
                             .padding(.bottom)
                         
                         HStack{
@@ -51,13 +74,14 @@ struct CreateToDoListView: View {
                                 .onChange(of: category, { oldValue, newValue in
                                     if category.count > charLimit {
                                         category = String(category.prefix(charLimit))}
+                                    
                                 }
                                 )
                                 .multilineTextAlignment(.center)
-                                .frame(width:60, alignment: .trailing)
+                                .frame(width: 30,height: 40, alignment: .trailing)
                                 .padding(.horizontal)
-                                .textFieldStyle(.roundedBorder)
-                            
+                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+
                         }.padding(.vertical)
                         HStack(spacing: 210){
                             Text("Date")
@@ -114,7 +138,7 @@ struct CreateToDoListView: View {
                         .bold()
                         .frame(width: 300)
                         .padding()
-                        .background(Color(.indigo))
+                        .background(Color(.my))
                         .foregroundStyle(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     

@@ -40,7 +40,6 @@ struct ListRowView: View {
     let rowComponents: ToDoComponents
     
     
-    @State var isD:Bool = false
     
     
     var body: some View {
@@ -67,10 +66,17 @@ struct ListRowView: View {
                         .font(.callout)
                 }
                 Spacer()
-                CheckboxView()
-//                Toggle("", isOn: $isD)
-//                    .tint(.indigo)
-//                    .toggleStyle(CheckboxToggleStyle())
+                Button {
+                    withAnimation{
+                        rowComponents.isDone.toggle()
+                    }
+                } label: {
+                    Image(systemName: "checkmark")
+                        .symbolVariant(.square.fill)
+                        .border(Color.black)
+                        .foregroundStyle(rowComponents.isDone ? .indigo : . white)
+                        .font(.title3)
+                }
             
             }
             
