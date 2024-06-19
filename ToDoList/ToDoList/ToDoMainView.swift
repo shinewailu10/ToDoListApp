@@ -111,6 +111,7 @@ struct ToDoMainView: View {
                         
                     }
                     .scrollContentBackground(.hidden)
+                    .colorScheme(.light)
                     .frame(maxWidth:350, maxHeight: 150)
                     .ignoresSafeArea(.all)
                     .padding(0)
